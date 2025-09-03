@@ -60,31 +60,7 @@ async function startBot() {
         // .menu
         else if (text === '.menu') {
             await sock.sendMessage(from, { text: `
-╔═══════════════════╗
-   *🤖 ${BOT_NAME}*  
-   Version: *${VERSION}*
-   Owner: *${OWNER_NAME}*
-╚═══════════════════╝
-
-*Available Commands:*
-.alive - Check bot status
-.ping - Test response speed
-.menu - Show this menu
-.link - Generate a WhatsApp link code
-.help - Usage guide
-.about - Info about bot and DSM
-.uptime - Show bot uptime
-.stats - Bot stats
-.random - Fun fact or meme
-.weather <city> - Weather info
-.news - Latest news headlines
-.max - Show max features
-
-*Owner Only:*
-.broadcast <msg>
-.setname <name>
-.setstatus <status>
-            `})
+╔═══════════════════╗\n   *🤖 ${BOT_NAME}*  \n   Version: *${VERSION}*\n   Owner: *${OWNER_NAME}*\n╚═══════════════════╝\n\n*Available Commands:*\n.alive - Check bot status\n.ping - Test response speed\n.menu - Show this menu\n.link - Generate a WhatsApp link code\n.help - Usage guide\n.about - Info about bot and DSM\n.uptime - Show bot uptime\n.stats - Bot stats\n.random - Fun fact or meme\n.weather <city> - Weather info\n.news - Latest news headlines\n.max - Show max features\n\n*Owner Only:*\n.broadcast <msg>\n.setname <name>\n.setstatus <status>`})
         }
 
         // .link
@@ -145,15 +121,7 @@ async function startBot() {
 
         // .max
         else if (text === '.max') {
-            await sock.sendMessage(from, { text: `
-*MAX Mode: All Features Unlocked*
-- Owner: ${OWNER_NAME}
-- Bot: ${BOT_NAME} v${VERSION}
-- Uptime: ${getUptime()}
-- Commands: .alive .ping .menu .link .help .about .uptime .stats .random .weather .news
-- Owner Only: .broadcast .setname .setstatus
-- [API features need setup by owner]
-            `})
+            await sock.sendMessage(from, { text: `\n*MAX Mode: All Features Unlocked*\n- Owner: ${OWNER_NAME}\n- Bot: ${BOT_NAME} v${VERSION}\n- Uptime: ${getUptime()}\n- Commands: .alive .ping .menu .link .help .about .uptime .stats .random .weather .news\n- Owner Only: .broadcast .setname .setstatus\n- [API features need setup by owner]`})
         }
 
         // Owner-only: .broadcast <msg>
